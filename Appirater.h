@@ -86,10 +86,13 @@ extern NSString *const kAppiraterReminderRequestDate;
 
 @interface Appirater : NSObject <UIAlertViewDelegate> {
 
-	UIAlertView		*ratingAlert;
+	UIAlertView		*_ratingAlert;
 }
 
-@property(nonatomic, strong) UIAlertView *ratingAlert;
+
+
+@property(nonatomic, retain) UIAlertView *ratingAlert;
+
 #if __has_feature(objc_arc_weak)
 @property(nonatomic, weak) NSObject <AppiraterDelegate> *delegate;
 #else
